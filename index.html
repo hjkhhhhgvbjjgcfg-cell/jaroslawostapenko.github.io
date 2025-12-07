@@ -1,107 +1,46 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gemini Casino</title>
-    <link rel="stylesheet" href="index.css" />
-  <link rel="stylesheet" href="/index.css">
+    <title>Yaroslav Ostapenko - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        scroll-behavior: smooth;
+      }
+      /* Custom scrollbar for better aesthetics */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #3b82f6;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #2563eb;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
 </head>
-  <body>
-    <div id="game-container">
-      <!-- Casino Lobby View -->
-      <div id="casino-lobby-view">
-        <h1 class="casino-title">GEMINI CASINO</h1>
-        <div id="game-list">
-          <div id="play-poker-btn" class="game-card">
-            <div class="game-card-icon">♠️ ♥️</div>
-            <h2>Texas Hold'em</h2>
-            <p>The classic poker game. Can you outsmart the AI?</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Poker Game View -->
-      <div id="poker-game-view" style="display: none">
-        <button id="back-to-lobby-btn" class="back-btn">← Lobby</button>
-        <div id="table">
-          <!-- AI Player Area -->
-          <div id="ai-area" class="player-area">
-            <div class="player-info">
-              <span class="name">AI Bot</span>
-              <div class="stack-container">
-                <span class="chip-icon">$</span>
-                <span class="stack">...</span>
-              </div>
-            </div>
-            <div class="cards"></div>
-            <div class="bet-box">
-              <span class="bet-amount"></span>
-            </div>
-            <div class="dealer-chip" style="display: none">D</div>
-            <div class="action-bubble" style="display: none"></div>
-          </div>
-
-          <!-- Community Area -->
-          <div id="community-area">
-            <div id="pot-area">
-              Pot: <span class="pot-amount">0</span>
-            </div>
-            <div id="community-cards" class="cards"></div>
-          </div>
-
-          <!-- Human Player Area -->
-          <div id="player-area" class="player-area">
-            <div class="cards"></div>
-            <div class="player-info">
-              <span class="name">You</span>
-              <div class="stack-container">
-                <span class="chip-icon">$</span>
-                <span class="stack">...</span>
-              </div>
-            </div>
-            <div class="bet-box">
-              <span class="bet-amount"></span>
-            </div>
-            <div class="dealer-chip" style="display: none">D</div>
-          </div>
-        </div>
-
-        <!-- Controls and Messages -->
-        <div id="message-box">
-          <p id="message">Welcome to AI Poker! Good luck!</p>
-        </div>
-
-        <div id="controls">
-          <div class="actions">
-            <button id="fold-btn" class="control-btn fold">Fold</button>
-            <button id="check-call-btn" class="control-btn check">Check</button>
-            <button id="bet-raise-btn" class="control-btn bet">Bet</button>
-          </div>
-          <div id="bet-slider-container" style="display: none">
-            <div class="bet-size-info">
-              <span id="bet-amount-display"></span>
-            </div>
-            <input
-              type="range"
-              id="bet-slider"
-              min="0"
-              max="0"
-              step="1"
-              value="0"
-            />
-            <div class="bet-actions">
-              <button id="confirm-bet-btn" class="control-btn confirm">
-                Confirm
-              </button>
-              <button id="cancel-bet-btn" class="control-btn cancel">
-                Cancel
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script type="module" src="/index.tsx"></script>
-  </body>
+  <body class="bg-slate-50 text-slate-900 antialiased">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
 </html>
